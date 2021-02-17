@@ -54,11 +54,13 @@ public class SavingsAccount extends AccountsEntity implements Transactions {
 		Double recebeValor = valueToPix;
 		int chave = this.chavePix;
 		
-		if (valueToPix < this.saldo && !(valueToPix == null) && !(chave == 0)) {
+		if (!(chave == 0) && (valueToPix < this.saldo && !(valueToPix == 0.0))) {
 			this.saldo = saldo - recebeValor;
 			HistoricoTransacao.gerarNumeroTransacao();
-	    }else {
-				System.out.println("Não é possível fazer a operação. Saldo insuficiente ou chave Pix não cadastrada!");
+	    }else if(chave == 0){
+			System.out.println("Não é possível fazer a operação. Chave Pix não cadastrada!");
+		}else {
+			System.out.println("Não é possível efetuar a operação. Saldo insuficiente!");
 		}
 		
 		return;
