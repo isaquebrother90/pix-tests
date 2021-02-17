@@ -2,23 +2,23 @@ package pixtests.inheritance;
 
 public abstract class AccountsEntity {
 
-	public int numeroConta;
-	public String titular;
-	
-	public int getNumeroConta() {
-		return numeroConta;
+	public int accountNumber;
+	public String accountHolder;
+
+	public int getAccountNumber() {
+		return accountNumber;
 	}
-	
-	public void setNumeroConta(int numeroConta) {
-		this.numeroConta=numeroConta;
+
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
 	}
-	
-	public String getTitular() {
-		return titular;
+
+	public String getAccountHolder() {
+		return accountHolder;
 	}
-	
-	public void setTitular(String titular) {
-		this.titular=titular;
+
+	public void setAccountHolder(String accountHolder) {
+		this.accountHolder = accountHolder;
 	}
-	
+
 }
